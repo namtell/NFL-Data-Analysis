@@ -8,12 +8,6 @@ team_names = ['Arizona Cardinals', 'Atlanta Falcons', 'Baltimore Ravens', 'Buffa
 
 
 def get_new_data(team, year):
-    '''
-    Function to pull NFL stats from Pro Football Reference (https://www.pro-football-reference.com/).
-    
-    - team : team name (str)
-    - year : year (int)
-    '''
     sym = symbols[team_names.index(team)].lower()
     url = f'https://www.pro-football-reference.com/teams/{sym}/{year}.htm'
     html = requests.get(url).text
